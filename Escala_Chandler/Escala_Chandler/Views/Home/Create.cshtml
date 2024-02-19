@@ -1,0 +1,24 @@
+﻿@model user
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<hr />
+<div class="col-md-6">
+
+    @using (Html.BeginForm())
+    {
+        <label>Username</label>
+        @*<input type="text" name="username" class="form-control" value="" />*@
+        @Html.TextBoxFor(m => m.username, new { @class= "form-control"})
+        <label>Password</label>
+        @*<input type="password" name="password" class="form-control" value="" />*@
+        @Html.TextBoxFor(m => m.password, new { @class = "form-control" })
+        <input type="submit" name="name" class="btn-success" value="Save" />
+        <br />
+        @ViewBag.Msg
+    }
+
+
+</div>
